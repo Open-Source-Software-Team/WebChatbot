@@ -38,7 +38,7 @@ body {
   animation: botPulse 1.5s infinite;
 }
 .floating-chat.expand {
-  width: 250px;
+  width: 308px;
   max-height: 400px;
   height: 400px;
   border-radius: 5px;

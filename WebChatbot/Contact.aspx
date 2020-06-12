@@ -17,17 +17,17 @@
     <div class="chat">
         <div class="header">
             <span class="title">
-               ¿Qué tienes en mente?
+               DigiBot
             </span>
             <button>
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>
         </div>
-        <div id="webchat" role="main" style="overflow: auto;">
+        <div id="webchat" role="main" style="overflow: auto; height: 100vh;">
 
         </div>
-        <div class="footer">
-            <div style="display: none" class="text-box" contenteditable="true" disabled="true"></div>
+        <div class="footer" style="display: none">
+            <div class="text-box" contenteditable="true" disabled="true"></div>
         </div>
     </div>
 </div>
@@ -35,19 +35,19 @@
             window.WebChat.renderWebChat(
                 {
                     locale: 'es-ES',
-                    overrideLocalizedStrings: (strings, language) => ({
-                        ...strings,
-                        TEXT_INPUT_PLACEHOLDER: 'Que estas pensando?'
-                    }),
+                    //overrideLocalizedStrings: (strings, language) => ({
+                    //    ...strings,
+                    //    TEXT_INPUT_PLACEHOLDER: 'Que estas pensando?'
+                    //}),
                     directLine: window.WebChat.createDirectLine({
                         secret: '',
                         token: '',
                         domain: 'http://localhost:3000/directline',
                         webSocket: false // defaults to true
                     }),
-                    userID: 'YOUR_USER_ID',
-                    username: 'Web Chat User',
-                    locale: 'en-US',
+                    //userID: 'YOUR_USER_ID',
+                    //username: 'Web Chat User',
+                    //locale: 'en-US',
                     botAvatarInitials: 'WC',
                     userAvatarInitials: 'WW',
                     styleOptions: {
@@ -55,10 +55,13 @@
                         rootWidth: '100%',
                         bubbleBackground: '#FFBFB1',
                         bubbleBorderRadius: 5,
-                        sendBoxBackground: 'Blue',
-                        bubbleFromUserBackground: 'Yellow',
-                        backgroundColor: 'Green',
-                        bubbleTextColor: 'White',
+                        hideUploadButton: true,
+                        bubbleMaxWidth: 200,
+                        fontSizeSmall: '10%'
+                        //sendBoxBackground: 'Blue',
+                        //bubbleFromUserBackground: 'Yellow',
+                        //backgroundColor: 'Green',
+                        //bubbleTextColor: 'White',
                     }
                 },
                 document.getElementById('webchat')
