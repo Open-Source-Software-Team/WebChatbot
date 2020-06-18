@@ -53,7 +53,10 @@
                     styleOptions: {
                         rootHeight: '100%',
                         rootWidth: '100%',
-                        bubbleBackground: '#FFBFB1',
+                        //bubbleBackground: '#FFBFB1',
+                        bubbleBackground: '#00569d',
+                        //bubbleFromUserTextColor: 'White',
+                        bubbleTextColor: 'White',
                         bubbleBorderRadius: 5,
                         hideUploadButton: true,
                         bubbleMaxWidth: 200,
@@ -67,7 +70,7 @@
                 document.getElementById('webchat')
             );
 
-        </script>
+</script>
 <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src="script-bot.js"></script>
